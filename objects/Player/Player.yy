@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Object1",
+  "name": "Player",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,12 +26,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite1",
-    "path": "sprites/Sprite1/Sprite1.yy",
+    "name": "DefaultPlayer",
+    "path": "sprites/DefaultPlayer/DefaultPlayer.yy",
   },
   "spriteMaskId": {
-    "name": "Sprite1",
-    "path": "sprites/Sprite1/Sprite1.yy",
+    "name": "DefaultPlayer",
+    "path": "sprites/DefaultPlayer/DefaultPlayer.yy",
   },
   "visible": true,
 }
