@@ -18,6 +18,11 @@
     {"name":"Background","order":2,"path":"folders/Sprites/Background.yy",},
   ],
   "ResourceOrderSettings": [
-    {"name":"Sprite2","order":1,"path":"sprites/Sprite2/Sprite2.yy",},
+    {"name":"TitleScreen","order":1,"path":"rooms/TitleScreen/TitleScreen.yy",},
+    {"name":"Enemy","order":1,"path":"objects/Enemy/Enemy.yy",},
+    {"name":"StartButton","order":2,"path":"objects/StartButton/StartButton.yy",},
+    {"name":"TempButton","order":3,"path":"sprites/TempButton/TempButton.yy",},
+    {"name":"DefaultEnemy","order":1,"path":"sprites/DefaultEnemy/DefaultEnemy.yy",},
+    {"name":"GameOver","order":2,"path":"rooms/GameOver/GameOver.yy",},
   ],
 }
