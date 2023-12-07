@@ -14,3 +14,14 @@ if (player != noone) {
 }
 
 
+playerLoc = instance_place(x, y, player);
+
+
+if (playerLoc != noone) {
+    playerLoc.hp -= 10;
+
+    if (playerLoc.hp <= 0) {
+        // Player is defeated, handle game over logic (e.g., show a game over screen or restart the level)
+        room_goto(GameOver);
+    }
+}
