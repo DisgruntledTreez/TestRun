@@ -8,3 +8,4 @@ vy = 0;
 dir = 0;
 hp = 100;
 cooldown = 0;
+damage_immunity = 0;
