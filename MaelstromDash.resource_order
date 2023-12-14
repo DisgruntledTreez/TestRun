@@ -14,11 +14,11 @@
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Background","order":1,"path":"folders/Sprites/Background.yy",},
+    {"name":"Enemy","order":3,"path":"folders/Sprites/Enemy.yy",},
     {"name":"PlayerSprite","order":2,"path":"folders/Sprites/PlayerSprite.yy",},
     {"name":"MoveLeft","order":1,"path":"folders/Sprites/PlayerSprite/MoveLeft.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Enemy","order":3,"path":"folders/Sprites/Enemy.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"sprite_enemy_idle_right","order":4,"path":"sprites/sprite_enemy_idle_right/sprite_enemy_idle_right.yy",},
