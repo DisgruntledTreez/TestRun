@@ -12,6 +12,11 @@ if (player != noone) {
     // Move towards the player
     x += lengthdir_x(walkSpeed, dir);
     y += lengthdir_y(walkSpeed, dir);
+	if (lengthdir_x(walkSpeed, dir) > 0) {
+		sprite_index = sprite_enemy_move_right;
+	} else if (lengthdir_x(walkSpeed, dir) < 0) {
+		sprite_index = sprite_enemy_move_left;
+	}
 }
 
 

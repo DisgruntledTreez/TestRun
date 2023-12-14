@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite_default_enemy",
-    "path": "sprites/sprite_default_enemy/sprite_default_enemy.yy",
+    "name": "sprite_enemy_idle_right",
+    "path": "sprites/sprite_enemy_idle_right/sprite_enemy_idle_right.yy",
   },
   "spriteMaskId": null,
   "visible": true,
