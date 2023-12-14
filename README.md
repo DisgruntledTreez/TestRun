@@ -1,2 +1,2 @@
-# DumdumGameProjWithoutName
- As the title implies.
+# Maelstrom Dash
+ A basic bullet heaven game/ rougelike
