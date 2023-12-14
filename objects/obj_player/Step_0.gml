@@ -16,8 +16,10 @@ moveDown = keyboard_check(vk_down);
 
 
 // Calculate movement
-vx = ((moveRight - moveLeft) * walkSpeed);
-vy = ((moveDown - moveUp) * walkSpeed);
+var _hor = moveRight - moveLeft;
+var _ver = moveDown - moveUp;
+vx = ((_hor) * walkSpeed);
+vy = ((_ver) * walkSpeed);
 
 
 //Calculate last moved direction for animation
@@ -58,3 +60,5 @@ if (vx != 0 || vy != 0) {
 		sprite_index = sprite_move_left_idle;
 	}
 }
+
+

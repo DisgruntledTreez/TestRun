@@ -5,7 +5,7 @@
 draw_self(); // Draw the hp bar background or frame
 
 // Calculate the width of the hp bar based on the player's hp
-var bar_width = (obj_player.hp / obj_player.maxhp) * sprite_width;
+var bar_width = (obj_player.hp / obj_player.maxhp) * sprite_width + 8;
 
 // Set the color for the hp bar based on hp percentage
 if (obj_player.hp > obj_player.maxhp * 0.7) {
@@ -17,7 +17,7 @@ if (obj_player.hp > obj_player.maxhp * 0.7) {
 }
 
 // Draw the actual hp bar
-draw_rectangle(x - sprite_width / 2, y - sprite_height, x - sprite_width / 2 + bar_width, y - sprite_height + sprite_height, false);
+draw_rectangle(x - sprite_width / 2 - 64, y - sprite_height * 2 - 44, x - sprite_width / 2 + bar_width - 64, y - sprite_height - 44, false);
 
 
 
