@@ -62,3 +62,16 @@ if (vx != 0 || vy != 0) {
 }
 
 
+//Attack resolution
+
+if (mouse_check_button_pressed(mb_left)) {
+	// Get the direction from player to mouse
+    var dir = point_direction(x, y, mouse_x, mouse_y);
+	
+    // Create an instance of obj_attack at the player's position
+    var attack_instance = instance_create_layer(x + lengthdir_x(64, dir), y 
+		+ lengthdir_y(64, dir), "Instances", obj_basic_attack);
+	attack_instance.direction = dir;
+
+
+}
