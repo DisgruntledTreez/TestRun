@@ -13,14 +13,12 @@ moveUp = keyboard_check(vk_up);
 moveLeft = keyboard_check(vk_left);
 moveDown = keyboard_check(vk_down);
 
-
-
 // Calculate movement
 var _hor = moveRight - moveLeft;
 var _ver = moveDown - moveUp;
 vx = ((_hor) * walkSpeed);
 vy = ((_ver) * walkSpeed);
-
+if (speed > walkSpeed) { speed = walkSpeed; }
 
 //Calculate last moved direction for animation
 if((moveRight - moveLeft) != 0) {

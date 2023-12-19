@@ -36,7 +36,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.0.121",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"sprite_enemy_idle_right","path":"sprites/sprite_enemy_idle_right/sprite_enemy_idle_right.yy",},},
@@ -50,8 +50,8 @@
     {"id":{"name":"sprite_enemy_idle_left","path":"sprites/sprite_enemy_idle_left/sprite_enemy_idle_left.yy",},},
     {"id":{"name":"obj_game_controller","path":"objects/obj_game_controller/obj_game_controller.yy",},},
     {"id":{"name":"obj_game_over_box","path":"objects/obj_game_over_box/obj_game_over_box.yy",},},
-    {"id":{"name":"sprite_health_bar","path":"sprites/sprite_health_bar/sprite_health_bar.yy",},},
     {"id":{"name":"obj_basic_attack","path":"objects/obj_basic_attack/obj_basic_attack.yy",},},
+    {"id":{"name":"sprite_bg_grass","path":"sprites/sprite_bg_grass/sprite_bg_grass.yy",},},
     {"id":{"name":"sprite_move_left_idle","path":"sprites/sprite_move_left_idle/sprite_move_left_idle.yy",},},
     {"id":{"name":"sprite_temp_start_button","path":"sprites/sprite_temp_start_button/sprite_temp_start_button.yy",},},
     {"id":{"name":"sprite_move_right_anim","path":"sprites/sprite_move_right_anim/sprite_move_right_anim.yy",},},
@@ -63,7 +63,6 @@
     {"id":{"name":"sprite_game_over","path":"sprites/sprite_game_over/sprite_game_over.yy",},},
     {"id":{"name":"sprite_game_over_button","path":"sprites/sprite_game_over_button/sprite_game_over_button.yy",},},
     {"id":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
-    {"id":{"name":"obj_health_bar","path":"objects/obj_health_bar/obj_health_bar.yy",},},
     {"id":{"name":"rm_game_area","path":"rooms/rm_game_area/rm_game_area.yy",},},
   ],
   "RoomOrderNodes": [
