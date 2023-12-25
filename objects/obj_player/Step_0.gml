@@ -28,7 +28,15 @@ if((moveRight - moveLeft) != 0) {
 
 // If Idle
 if (vx == 0 && vy == 0) {
-	// do nothing for now
+	switch lastDir {
+		case 1:
+			sprite_index = sprite_move_right_anim;
+			break;
+		case -1: 
+			sprite_index = sprite_move_left_anim;
+			break;
+		default: //Here for completion and incase it is needed later.
+	}
 }
 
 

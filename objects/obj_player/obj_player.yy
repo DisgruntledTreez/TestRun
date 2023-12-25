@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite_move_left_anim",
-    "path": "sprites/sprite_move_left_anim/sprite_move_left_anim.yy",
+    "name": "sprite_player_idle_right",
+    "path": "sprites/sprite_player_idle_right/sprite_player_idle_right.yy",
   },
   "spriteMaskId": null,
   "visible": true,
