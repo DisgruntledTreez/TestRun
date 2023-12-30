@@ -34,7 +34,7 @@ if (collision) {
 if (hp <= 0) {
     // Enemy is defeated, perform death actions
     instance_destroy(); // Destroy the enemy instance
-    
+    score++;
     // Optional: You might want to play a death animation, spawn particles, or award points.
     // sprite_index = spr_enemy_death; // Replace with the death animation sprite
     // particle_create(x, y, pt_enemy_death); // Replace with the death particle type

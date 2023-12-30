@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Player",
+    "path": "folders/Objects/Player.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite_move_left_anim",
-    "path": "sprites/sprite_move_left_anim/sprite_move_left_anim.yy",
+    "name": "sprite_player_idle_rd",
+    "path": "sprites/sprite_player_idle_rd/sprite_player_idle_rd.yy",
   },
   "spriteMaskId": null,
   "visible": true,
