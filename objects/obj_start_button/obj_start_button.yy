@@ -4,15 +4,17 @@
   "name": "obj_start_button",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "StartMenu",
+    "path": "folders/Objects/StartMenu.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_button",
+    "path": "objects/obj_button/obj_button.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite_temp_start_button",
-    "path": "sprites/sprite_temp_start_button/sprite_temp_start_button.yy",
+    "name": "sprite_button",
+    "path": "sprites/sprite_button/sprite_button.yy",
   },
   "spriteMaskId": null,
   "visible": true,

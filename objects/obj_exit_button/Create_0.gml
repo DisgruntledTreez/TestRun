@@ -2,21 +2,13 @@
 // You can write your code in this editor
 
 
-
-
-
-
-
-
-
-
-
 // Inherit the parent event
 event_inherited();
 
-button_text = "START";
+button_text = "EXIT";
 
 activate_button = function() 
 {
-	start_game();
+	game_end(-1);
 }
+

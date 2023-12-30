@@ -1,19 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_enemy",
+  "name": "obj_exit_button",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_basic_attack","path":"objects/obj_basic_attack/obj_basic_attack.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "ParentObjects",
-    "path": "folders/Objects/ParentObjects.yy",
+    "name": "StartMenu",
+    "path": "folders/Objects/StartMenu.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_button",
+    "path": "objects/obj_button/obj_button.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -30,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite_enemy_idle_right",
-    "path": "sprites/sprite_enemy_idle_right/sprite_enemy_idle_right.yy",
+    "name": "sprite_button",
+    "path": "sprites/sprite_button/sprite_button.yy",
   },
   "spriteMaskId": null,
   "visible": true,

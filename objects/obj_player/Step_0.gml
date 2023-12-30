@@ -16,56 +16,63 @@ moveDown = keyboard_check(vk_down);
 // Calculate movement
 var _hor = moveRight - moveLeft;
 var _ver = moveDown - moveUp;
-vx = ((_hor) * walkSpeed);
-vy = ((_ver) * walkSpeed);
-if (speed > walkSpeed) { speed = walkSpeed; }
-
-//Calculate last moved direction for animation
-if((moveRight - moveLeft) != 0) {
-	lastDir = (moveRight - moveLeft);
+var dir = point_direction(0,0, (_hor) * walkSpeed, (_ver) * walkSpeed);
+if (_hor != 0 || _ver != 0) {
+	vx = lengthdir_x(walkSpeed, dir);
+	vy = lengthdir_y(walkSpeed, dir);
+} else {
+	vx = 0;
+	vy = 0;
 }
 
+//Calculate last moved direction for animation
+if (vx != 0) {
+	lastx =  _hor;
+}
+if (vy != 0) {
+	lasty =  _ver;
+	if (lasty <= 0) lasty += 1;
+} else {
+	if (vx != 0) lasty = 1;
+}
 
 // If Idle
 if (vx == 0 && vy == 0) {
-	switch lastDir {
+	switch (lastx + lasty) {
+		case -1:
+			sprite_index = sprite_player_idle_lu;
+			break;
+		case 0:
+			sprite_index = sprite_player_idle_ld;
+			break;
 		case 1:
-			sprite_index = sprite_move_right_anim;
+			sprite_index = sprite_player_idle_ru;
 			break;
-		case -1: 
-			sprite_index = sprite_move_left_anim;
+		case 2:
+			sprite_index = sprite_player_idle_rd;
 			break;
-		default: //Here for completion and incase it is needed later.
 	}
-}
-
-
-
-// If moving, move object and animate
-if (vx != 0 || vy != 0) {
+} else {
 	x += vx;
 	y += vy;
-	switch lastDir {
+	switch (lastx + lasty) {
+		case -1:
+			sprite_index = sprite_player_move_lu;
+			break;
+		case 0:
+			sprite_index = sprite_player_move_ld;
+			break;
 		case 1:
-			sprite_index = sprite_move_right_anim;
+			sprite_index = sprite_player_move_ru;
 			break;
-		case -1: 
-			sprite_index = sprite_move_left_anim;
+		case 2:
+			sprite_index = sprite_player_move_rd;
 			break;
-		default: //Here for completion and incase it is needed later.
 	}
 }
 
 
 
-//Idle Animation Check
- else {
-	if(lastDir == 1) {
-		sprite_index = sprite_move_right_idle;
-	} else if (lastDir == -1) {
-		sprite_index = sprite_move_left_idle;
-	}
-}
 
 
 //Attack resolution

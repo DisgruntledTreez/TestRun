@@ -36,11 +36,23 @@ if (random(100) < 5) {
     newEnemy.image_yscale = scaleMultiplier;
 	
 
-}
+} 
 
 if (keyboard_check_pressed(vk_f11)) {
 	window_set_fullscreen(!window_get_fullscreen());
 }
+
+if (room == rm_game_area) {
+	if keyboard_check_pressed(vk_escape) {
+	    paused = !paused;
+	    if (paused == false) {
+			instance_activate_all();
+			surface_free(paused_surf);
+            paused_surf = -1;
+		}
+	}
+}
+
 
 
 

@@ -10,4 +10,5 @@ moveUp = 0;
 moveDown = 0;
 hp = 100;
 maxhp = 100;
-lastDir = 1;
+lastx =  1;
+lasty =  1;

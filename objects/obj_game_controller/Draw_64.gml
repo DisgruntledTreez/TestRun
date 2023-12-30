@@ -9,9 +9,3 @@ var player = instance_nearest(x, y, obj_player);
 
 draw_healthbar(10, 10, window_get_width()/2 * (player.maxhp/500), window_get_height()/50 + 10, player.hp, c_black, c_red, c_lime, 0, true, true)
 
-
-
-
-
-
-
