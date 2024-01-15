@@ -1,33 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-view_enabled = true;
-view_visible[0] = true;
-var base_w = 1024;
-var base_h = 768;
-var max_w = display_get_width();
-var max_h = display_get_height();
-var aspect = display_get_width() / display_get_height();
-if (max_w < max_h) {
-    // portait
-    var VIEW_WIDTH = min(base_w, max_w);
-    var VIEW_HEIGHT = VIEW_WIDTH / aspect;
-	}
-else {
-    // landscape
-    var VIEW_HEIGHT = min(base_h, max_h);
-    var VIEW_WIDTH = VIEW_HEIGHT * aspect;
+
+window_set_fullscreen(true);
+global.score = 0;
+
+file_name = "SaveFile.sav";
+if (!file_exists(file_name)) {
+	ds_map_secure_save(save_data,file_name);
+} else {
+	save_data = ds_map_secure_load(file_name);
 }
-camera_set_view_size(view_camera[0], floor(VIEW_WIDTH), floor(VIEW_HEIGHT))
-view_wport[0] = max_w;
-view_hport[0] = max_h;
-surface_resize(application_surface, view_wport[0], view_hport[0]);
-window_set_fullscreen(true)
 
-
-
-
-
-
-
-
-
+global.highscore = ds_map_find_value(save_data, "Highscore");
+if is_undefined(global.highscore) global.highscore = 0;

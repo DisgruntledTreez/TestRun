@@ -7,7 +7,7 @@
 // Set the probability of spawning an enemy (adjust as needed)
 if (random(100) < 5) {
     // Get the player object
-    var player = instance_nearest(x, y, obj_player);
+	
 
     if (!instance_exists(player)) {
         // Player object not found, return
@@ -37,21 +37,41 @@ if (random(100) < 5) {
 	
 
 } 
-
 if (keyboard_check_pressed(vk_f11)) {
-	window_set_fullscreen(!window_get_fullscreen());
+	fullscreen_toggle();
 }
 
 if (room == rm_game_area) {
-	if keyboard_check_pressed(vk_escape) {
-	    paused = !paused;
-	    if (paused == false) {
+	if instance_exists(obj_player) player = instance_nearest(x, y, obj_player);
+	if keyboard_check_pressed(vk_escape) && global.menu <= 1 {
+	    if (global.menu == 0) global.menu = 1;
+		else global.menu = 0;
+	}
+	
+}
+switch (global.menu) {
+		case 0:
 			instance_activate_all();
 			surface_free(paused_surf);
             paused_surf = -1;
+			is_prev_options = false;
+		case 1:
+			surface_free(option_surf);
+            option_surf = -1;
+			surface_free(upg_surf);
+            upg_surf = -1;
+			break;
+		case 2:
+			surface_free(paused_surf);
+            paused_surf = -1;
+			is_prev_options = true;
+			break;
+		case 3:
+			surface_free(paused_surf);
+            paused_surf = -1;
+			break;
 		}
-	}
-}
+
 
 
 

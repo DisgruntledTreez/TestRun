@@ -6,6 +6,11 @@
 // Player is defeated, handle game over logic (e.g., show a game over screen or restart the level)
 if (hp <= 0) {
 	room_goto(rm_game_over);
+	if (global.score > global.highscore) {
+		global.highscore = global.score;
+		ds_map_replace(obj_game_controller.save_data, "Highscore", global.highscore);
+		ds_map_secure_save(obj_game_controller.save_data, obj_game_controller.file_name);
+	}
 }
 
 moveRight = keyboard_check(vk_right);
@@ -77,14 +82,24 @@ if (vx == 0 && vy == 0) {
 
 //Attack resolution
 
-if (mouse_check_button_pressed(mb_left)) {
+if (mouse_check_button_pressed(mb_left) && cooldown == 0) {
 	// Get the direction from player to mouse
     var dir = point_direction(x, y, mouse_x, mouse_y);
 	
     // Create an instance of obj_attack at the player's position
-    var attack_instance = instance_create_layer(x + lengthdir_x(64, dir), y 
-		+ lengthdir_y(64, dir), "Instances", obj_basic_attack);
+    var attack_instance = instance_create_layer(x + lengthdir_x(80, dir), y 
+		+ lengthdir_y(80, dir), "Instances", obj_basic_attack);
 	attack_instance.direction = dir;
 
 
 }
+var proj_instance = -1;
+if (mouse_check_button_pressed(mb_right) && cooldown == 0) {
+	 var dir = point_direction(x, y, mouse_x, mouse_y);
+	
+    // Create an instance of obj_attack at the player's position
+    proj_instance = instance_create_layer(x + lengthdir_x(80, dir), y 
+		+ lengthdir_y(80, dir), "Instances", obj_proj_energy_cannon);
+}
+if cooldown > 0 cooldown--;
+
